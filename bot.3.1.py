@@ -95,5 +95,5 @@ def handle_message(message):
     if len(last_messages) > 5:
         last_messages = last_messages[-5:]
 
-# Запустите бота
+# Запускаем бота
 bot.polling()
