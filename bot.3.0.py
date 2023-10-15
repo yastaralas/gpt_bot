@@ -45,14 +45,9 @@ def handle_message(message):
         bot.send_message(message.chat.id, random_response)
 
     # Проверяем наличие и соответствие второму регулярному выражению
-    pattern2 = r'(исходный\s*код|исходники)'
+    pattern2 = r'(ка*к\s*т\wбя\s*з\wвут|ка*к\s*тв\w\w\s*им\w|у\s*т\wбя\s*есть\s*им\w|т\wбя\s*как\s*з\wвут)'
     match2 = re.search(pattern2, message.text, re.IGNORECASE)
     if match2:
-        bot.send_message(message.chat.id, 'Мой исходный код написан на языке Pathon, а для генерации текста используется нейросеть GPT-3 — это все, что я могу рассказать.')
-
-    pattern3 = r'(ка*к\s*т\wбя\s*з\wвут|ка*к\s*тв\w\w\s*им\w|у\s*т\wбя\s*есть\s*им\w|т\wбя\s*как\s*з\wвут)'
-    match3 = re.search(pattern3, message.text, re.IGNORECASE)
-    if match3:
         bot.send_message(message.chat.id, 'У меня нет имени.')
 
     try:
